@@ -66,6 +66,7 @@ onMounted(() => {
 
 <style scoped lang="scss">
 @import "@/styles/variables";
+@import "@/styles/responsive";
 .wrapper {
   width: 100%;
 }
@@ -136,8 +137,17 @@ onMounted(() => {
     max-width: 100%;
     gap: 1rem;
     overflow: scroll;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
     margin: 1rem 0;
+  }
+}
+
+@include screen("sm") {
+  .orders {
+    .filter-status {
+      gap: 0;
+      margin: 0.5rem 0;
+    }
   }
 }
 </style>
