@@ -73,6 +73,8 @@ const router = useRouter();
 
 <style scoped lang="scss">
 @import "@/styles/variables.scss";
+@import "@/styles/responsive.scss";
+
 .user {
   padding: 1rem 0;
   display: flex;
@@ -93,6 +95,21 @@ const router = useRouter();
       width: 100%;
       height: 100%;
     }
+  }
+}
+
+@include screen("sm") {
+  .user {
+    .avatar {
+      height: 25px;
+      width: 25px;
+    }
+    .name {
+      display: none;
+    }
+  }
+  .anticon {
+    display: none;
   }
 }
 </style>
