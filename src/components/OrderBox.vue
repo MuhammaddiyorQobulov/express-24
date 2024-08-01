@@ -113,16 +113,7 @@ const props = defineProps({
   }
 }
 
-@include screen("sm") {
-  .order-box {
-    .infos {
-      .img {
-        width: 100%;
-      }
-    }
-  }
-}
-@include screen("md") {
+@media screen and (max-width: 526px) {
   .order-box {
     .infos {
       .img {

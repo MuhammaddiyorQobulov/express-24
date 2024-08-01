@@ -102,6 +102,7 @@ onMounted(() => {
     gap: 1rem;
     &-title {
       font-size: 20px;
+      white-space: nowrap;
     }
     &-cost {
       font-size: 30px;
@@ -109,6 +110,8 @@ onMounted(() => {
   }
   .infos {
     justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 1rem;
   }
   .status {
     padding: 0.2rem 0.5rem;
@@ -142,11 +145,20 @@ onMounted(() => {
   }
 }
 
-@include screen("sm") {
+@media screen and (max-width: 600px) {
   .orders {
     .filter-status {
-      gap: 0;
       margin: 0.5rem 0;
+    }
+    .infos {
+      .total {
+        &-title {
+          font-size: 16px;
+        }
+        &-cost {
+          font-size: 20px;
+        }
+      }
     }
   }
 }
