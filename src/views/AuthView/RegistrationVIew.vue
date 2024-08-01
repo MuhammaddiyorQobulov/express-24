@@ -82,6 +82,7 @@ const handleRegistration = async () => {
 
 <style scoped lang="scss">
 @import "@/styles/variables.scss";
+@import "@/styles/responsive.scss";
 .wrapper {
   background: url("@/assets/images/main-bg.png") no-repeat center;
   background-size: cover;
@@ -120,6 +121,20 @@ const handleRegistration = async () => {
           background: $primary;
         }
       }
+    }
+  }
+}
+@include screen("sm") {
+  .wrapper {
+    .registration {
+      transform: scale(0.7);
+    }
+  }
+}
+@include screen("md") {
+  .wrapper {
+    .registration {
+      transform: scale(0.8);
     }
   }
 }
