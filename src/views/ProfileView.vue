@@ -69,7 +69,7 @@ const CloseModal = (value) => {
     <form @submit.prevent="FormSubmit" class="modal-form">
       <h1>Edit</h1>
       <a-row :gutter="[16, 32]">
-        <a-col class="input-group">
+        <a-col span="12" class="input-group">
           <label for="username">Username</label>
           <input
             type="text"
@@ -78,7 +78,7 @@ const CloseModal = (value) => {
             v-model="authStore.user.username"
           />
         </a-col>
-        <a-col class="input-group">
+        <a-col span="12" class="input-group">
           <label for="phone">Phone</label>
           <input
             type="tel"
@@ -114,7 +114,7 @@ const CloseModal = (value) => {
             v-model="authStore.user.confirm"
           />
         </a-col>
-        <a-col class="input-group">
+        <a-col span="12" class="input-group">
           <label for="avatar">Avatar</label>
           <input ref="imgRef" type="file" name="avatar" id="avatar" />
         </a-col>
