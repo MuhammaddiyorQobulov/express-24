@@ -110,6 +110,19 @@ const filterByType = (type) => {
       gap: 0;
       padding: 0.5rem;
     }
+    .products {
+      justify-content: center;
+    }
+  }
+}
+@include screen("md") {
+  .home {
+    .filters {
+      padding: 0.5rem;
+    }
+    .products {
+      justify-content: center;
+    }
   }
 }
 </style>

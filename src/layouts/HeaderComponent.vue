@@ -37,4 +37,12 @@ import UserOverlay from "@/components/UserOverlay.vue";
     }
   }
 }
+@include screen("md") {
+  .navbar {
+    height: 20px;
+    svg {
+      height: 30px;
+    }
+  }
+}
 </style>

@@ -197,4 +197,28 @@ const order = async () => {
     }
   }
 }
+@include screen("md") {
+  .carts {
+    .wrapper {
+      .total {
+        flex-direction: column;
+        margin-top: 1rem;
+        gap: 0;
+        &-cost {
+          font-size: 25px;
+          white-space: nowrap;
+        }
+        &-title {
+          white-space: nowrap;
+          font-size: 15px;
+        }
+      }
+      .btn {
+        padding: 0.4rem;
+        font-size: 14px;
+        white-space: nowrap;
+      }
+    }
+  }
+}
 </style>

@@ -6,6 +6,11 @@ import ModalComponent from "./ModalComponent.vue";
 const cartsStore = useCartsStore();
 const visible = ref(false);
 
+const addCart = async () => {
+  await cartsStore.addCart(props.product._id, 1);
+  if (!cartsStore.error) visible.value = false;
+};
+
 const props = defineProps({
   product: {
     _id: {
@@ -58,12 +63,7 @@ const props = defineProps({
           Mahsulot narxiga birmarttalik idish narxi qo'shiladi! (1500)
         </p>
         <div class="modal-btn">
-          <button
-            @click="cartsStore.addCart(props.product._id, 1)"
-            class="btn warning"
-          >
-            Add to cart
-          </button>
+          <button @click="addCart" class="btn warning">Add to cart</button>
         </div>
       </div>
     </div>

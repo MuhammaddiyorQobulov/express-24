@@ -65,4 +65,10 @@ form {
     padding: 5px;
   }
 }
+@include screen("md") {
+  form {
+    transform: scale(0.8);
+    padding: 5px;
+  }
+}
 </style>

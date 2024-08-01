@@ -112,4 +112,18 @@ const router = useRouter();
     display: none;
   }
 }
+@include screen("md") {
+  .user {
+    .avatar {
+      height: 25px;
+      width: 25px;
+    }
+    .name {
+      display: none;
+    }
+  }
+  .anticon {
+    display: none;
+  }
+}
 </style>
