@@ -7,7 +7,6 @@ const api = axios.create({
     "Content-Type": "application/json",
   },
 });
-
 api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem("token");
@@ -20,7 +19,6 @@ api.interceptors.request.use(
     return Promise.reject(error);
   }
 );
-
 api.interceptors.response.use(
   (response) => {
     return response;
