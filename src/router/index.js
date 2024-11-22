@@ -17,6 +17,7 @@ import NewOrders from "@/views/DeliverView/NewOrders.vue";
 import DeliveredOrders from "@/views/DeliverView/DeliveredOrders.vue";
 import MyOrders from "@/views/DeliverView/MyOrders.vue";
 import ProfileView from "@/views/ProfileView.vue";
+import PdfView from "@/views/PdfView.vue";
 const routes = [
   {
     path: "/login",
@@ -27,6 +28,11 @@ const routes = [
     path: "/registration",
     name: "registration",
     component: RegistrationView,
+  },
+  {
+    path: "/pdf",
+    name: "pdf",
+    component: PdfView,
   },
   {
     path: "/admin",

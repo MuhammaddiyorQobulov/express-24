@@ -45,15 +45,14 @@ const router = useRouter();
         >
           <a-menu-item key="5">Admin Paneli</a-menu-item>
         </router-link>
-
         <router-link
           v-if="
-            (authStore.isAdmin || !authStore.user.roles.indexOf('DELIVER')) &&
+            (authStore.isAdmin || authStore.user.roles.includes('DELIVER')) &&
             !route.path.includes('/deliver')
           "
           to="/deliver/new-orders"
         >
-          <a-menu-item key="6">Kuryer Paneli</a-menu-item>
+          <a-menu-item key="6">Kuryer Paneli </a-menu-item>
         </router-link>
         <a-menu-divider />
         <a-menu-item
